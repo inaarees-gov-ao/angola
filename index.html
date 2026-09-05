@@ -1,1 +1,708 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head><style>
+@font-face {
+  font-family: "Optimistic";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Optimistic Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+}
+:where(html) {
+  font-family: "Optimistic", system-ui, sans-serif;
+}
+:where(code, pre, kbd, samp) {
+  font-family: "Optimistic Mono", ui-monospace, monospace;
+}
+</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
 
+<!-- ===== SEO Básico - Google ===== -->
+<title>INAAREES - Homologação e Reconhecimento de Estudos do Ensino Médio e Superior | Portal Oficial Angola</title>
+<meta name="description" content="INAAREES - Instituto Nacional de Avaliação, Acreditação e Reconhecimento de Estudos. Portal oficial do Governo de Angola para homologação do Ensino Médio 10ª à 13ª Classe e Superior 1º ao 5º Ano. Emissão de Recibo Institucional INAAREES-INST, Recibo INAAREES-HOM e Declaração Oficial INAAREES-DEC com selo da República. Sede: Kilamba, Belas, Luanda.">
+<meta name="keywords" content="INAAREES, homologação Angola, reconhecimento estudos Angola, INAAREES homologação, ensino médio 10ª 13ª classe, ensino superior 1º 5º ano, MESCTI Angola, Governo Angola, declaração INAAREES, recibo INAAREES, homologação diploma Angola, 21 províncias Lei 14/24, Kilamba Belas Luanda">
+<meta name="author" content="INAAREES - Instituto Nacional de Avaliação, Acreditação e Reconhecimento de Estudos - República de Angola">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="bingbot" content="index, follow">
+<meta name="language" content="Portuguese">
+<meta name="geo.region" content="AO-LUA">
+<meta name="geo.placename" content="Luanda, Angola">
+<meta name="geo.position" content="-8.8383;13.2894">
+<meta name="ICBM" content="-8.8383, 13.2894">
+
+<!-- ===== Canonical URL ===== -->
+<link rel="canonical" href="https://inaarees-gov-ao.github.io/angola/">
+<link rel="alternate" hreflang="pt-AO" href="https://inaarees-gov-ao.github.io/angola/">
+<link rel="alternate" hreflang="pt" href="https://inaarees-gov-ao.github.io/angola/">
+
+<!-- ===== Meta Tags Mobile ===== -->
+<meta name="theme-color" content="#0A1931">
+<meta name="msapplication-TileColor" content="#0A1931">
+<meta name="msapplication-navbutton-color" content="#0A1931">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="INAAREES">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="INAAREES">
+<meta name="format-detection" content="telephone=yes">
+
+<!-- ===== Favicon ===== -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23CE1126' stroke='%23FFC72C' stroke-width='4'/><text x='50' y='40' text-anchor='middle' font-family='Arial' font-weight='900' font-size='18' fill='white'>INAA</text><text x='50' y='62' text-anchor='middle' font-family='Arial' font-weight='900' font-size='18' fill='white'>REES</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23CE1126' stroke='%23FFC72C' stroke-width='4'/><text x='50' y='40' text-anchor='middle' font-family='Arial' font-weight='900' font-size='18' fill='white'>INAA</text><text x='50' y='62' text-anchor='middle' font-family='Arial' font-weight='900' font-size='18' fill='white'>REES</text></svg>">
+<link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiSU5BQUVSRVMgLSBQb3J0YWwgT2ZpY2lhbCIsInNob3J0X25hbWUiOiJJTkFBQVJFRVMiLCJzdGFydF91cmwiOiJodHRwczovL2luYWFyZWVzLWdvdi1hby5naXRodWIuaW8vYW5nb2xhLyIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwiYmFja2dyb3VuZF9jb2xvciI6IiMwQTE5MzEiLCJ0aGVtZV9jb2xvciI6IiMwQTE5MzEiLCJpY29ucyI6W3sic3JjIjoiZGF0YTppbWFnZS9zdmcreG1sOjxzdmcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScwIDAgMTAwIDEwMCc+PGNpcmNsZSBjeD0nNTAnIGN5PSc1MCcgcj0nNDgnIGZpbGw9JyNDRTExMjYnIHN0cm9rZT0nI0ZGQzcyQycgc3Ryb2tlLXdpZHRoPSc0Jy8+PHRleHQgeD0nNTAnIHk9JzQwJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmb250LWZhbWlseT0nQXJpYWwnIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nMTgnIGZpbGw9J3doaXRlJz5JTkFBPC90ZXh0Pjx0ZXh0IHg9JzUwJyB5PSc2MicgdGV4dC1hbmNob3I9J21pZGRsZScgZm9udC1mYW1pbHk9J0FyaWFsJyBmb250LXdlaWdodD0nOTAwJyBmb250LXNpemU9JzE4JyBmaWxsPSd3aGl0ZSc+UkVFUzwvdGV4dD48L3N2Zz4iLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2Uvc3ZnK3htbCJ9XX0=">
+
+<!-- ===== Open Graph para Facebook, WhatsApp, LinkedIn ===== -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://inaarees-gov-ao.github.io/angola/">
+<meta property="og:title" content="INAAREES - Homologação e Reconhecimento de Estudos do Ensino Médio e Superior | Portal Oficial Angola">
+<meta property="og:description" content="Portal oficial do Governo de Angola para homologação do Ensino Médio 10ª à 13ª Classe e Superior 1º ao 5º Ano. Emissão de Recibo Institucional INAAREES-INST, Recibo INAAREES-HOM e Declaração Oficial INAAREES-DEC com selo da República. 21 províncias Lei 14/24.">
+<meta property="og:image" content="https://inaarees-gov-ao.github.io/angola/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="INAAREES - Instituto Nacional de Avaliação, Acreditação e Reconhecimento de Estudos - República de Angola">
+<meta property="og:site_name" content="INAAREES - Governo de Angola">
+<meta property="og:locale" content="pt_AO">
+<meta property="og:locale:alternate" content="pt_PT">
+<meta property="fb:app_id" content="">
+
+<!-- ===== Twitter Card ===== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://inaarees-gov-ao.github.io/angola/">
+<meta name="twitter:title" content="INAAREES - Homologação e Reconhecimento de Estudos | Portal Oficial Angola">
+<meta name="twitter:description" content="Portal oficial do Governo de Angola para homologação do Ensino Médio 10ª à 13ª Classe e Superior 1º ao 5º Ano. Recibo Institucional INAAREES-INST, Recibo INAAREES-HOM e Declaração INAAREES-DEC com selo da República.">
+<meta name="twitter:image" content="https://inaarees-gov-ao.github.io/angola/og-image.jpg">
+<meta name="twitter:image:alt" content="INAAREES - Instituto Nacional de Avaliação, Acreditação e Reconhecimento de Estudos">
+
+<!-- ===== Verificação Google e Bing - AGUARDANDO SEUS CÓDIGOS ===== -->
+<!-- CÓDIGOS VERIFICADOS 05/09/2026 - Google e Bing -->
+<meta name="google-site-verification" content="VOopH4iay2ThG0_8CMs3nUmgs0cpQCyIl_1nzrGTgnc">
+<meta name="msvalidate.01" content="FDB246A6B376BC0E60B008663ACDB181">
+
+<!-- ===== Dados Estruturados Google - Organização Governamental ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GovernmentOrganization",
+  "name": "INAAREES - Instituto Nacional de Avaliação, Acreditação e Reconhecimento de Estudos",
+  "alternateName": "INAAREES",
+  "url": "https://inaarees-gov-ao.github.io/angola/",
+  "logo": "https://inaarees-gov-ao.github.io/angola/logo.png",
+  "image": "https://inaarees-gov-ao.github.io/angola/og-image.jpg",
+  "description": "Instituto Nacional de Avaliação, Acreditação e Reconhecimento de Estudos do Ensino Médio e Superior - Organismo do Ministério do Ensino Superior, Ciência, Tecnologia e Inovação (MESCTI) da República de Angola, responsável pela homologação, reconhecimento e equivalência de estudos do Ensino Médio 10ª à 13ª Classe e Superior 1º ao 5º Ano, conferindo validade nacional.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Condomínio Jardim do Kilamba",
+    "addressLocality": "Belas",
+    "addressRegion": "Luanda",
+    "postalCode": "0000",
+    "addressCountry": "AO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -8.8383,
+    "longitude": 13.2894
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+244-938-510-719",
+    "contactType": "customer service",
+    "availableLanguage": ["Portuguese"],
+    "areaServed": "AO"
+  },
+  "sameAs": [
+    "https://inaarees-gov-ao.github.io/angola/"
+  ],
+  "foundingDate": "2016",
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Luanda, Angola"
+  },
+  "parentOrganization": {
+    "@type": "GovernmentOrganization",
+    "name": "Ministério do Ensino Superior, Ciência, Tecnologia e Inovação - MESCTI - Governo de Angola"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Angola"
+  },
+  "serviceType": ["Homologação Ensino Médio 10ª à 13ª Classe", "Homologação Ensino Superior 1º ao 5º Ano", "Reconhecimento de Estudos", "Equivalência de Estudos", "Emissão Recibo INAAREES-INST", "Emissão Recibo INAAREES-HOM", "Emissão Declaração INAAREES-DEC"]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "INAAREES - Portal Oficial",
+  "url": "https://inaarees-gov-ao.github.io/angola/",
+  "description": "Portal oficial do INAAREES para homologação e reconhecimento de estudos do Ensino Médio e Superior em Angola",
+  "inLanguage": "pt-AO",
+  "publisher": {
+    "@type": "GovernmentOrganization",
+    "name": "INAAREES"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://inaarees-gov-ao.github.io/angola/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+body{background:#F5F3EB;color:#0A1931}
+.header-top{background:#0A1931;color:#fff;font-size:10px;padding:8px 20px;display:flex;justify-content:space-between}
+.header-main{background:#fff;border-bottom:1px solid #ddd;position:sticky;top:0;z-index:40}
+.header-inner{max-width:1300px;margin:0 auto;padding:0 20px;height:70px;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;gap:10px;align-items:center;cursor:pointer}
+.logo-icon{width:44px;height:44px;background:#CE1126;border:2px solid #FFC72C;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:8px;text-align:center}
+.nav{display:flex;gap:4px}
+.nav button{border:0;background:#f1f1f1;padding:8px 14px;border-radius:20px;font-size:12px;font-weight:700;cursor:pointer}
+.nav button.active{background:#0A1931;color:#fff}
+.nav button.solicitar{background:#CE1126;color:#fff}
+.progress-bar{background:#fff;border-bottom:1px solid #ddd;position:sticky;top:70px;z-index:30}
+.progress-inner{max-width:1300px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;align-items:center}
+.page{display:none}.page.active{display:block}
+.page-wrap{max-width:1300px;margin:0 auto;padding:30px 20px}
+.card{background:#fff;border:1px solid #ddd;border-radius:16px;padding:20px}
+.btn{border:0;padding:10px 18px;border-radius:20px;font-weight:700;font-size:12px;cursor:pointer}
+.btn-dark{background:#0A1931;color:#fff}.btn-red{background:#CE1126;color:#fff}.btn-yellow{background:#FFC72C;color:#000}.btn-border{background:#fff;border:1px solid #ddd}
+.step{display:none}.step.active{display:block}
+.steps-bar{background:#fff;border:1px solid #ddd;border-radius:20px;padding:10px;display:flex;gap:10px;margin:20px 0}
+.steps-bar div{flex:1;display:flex;gap:8px;align-items:center;opacity:0.4}
+.steps-bar div.active{opacity:1}
+.steps-bar .num{width:32px;height:32px;border-radius:50%;background:#ddd;display:flex;align-items:center;justify-content:center;font-weight:800}
+.steps-bar .active .num{background:#0A1931;color:#fff}
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:none;z-index:100;align-items:center;justify-content:center;padding:20px}
+.modal-bg.show{display:flex}
+.modal-box{background:#fff;border-radius:20px;max-width:700px;width:100%;padding:24px;max-height:90vh;overflow:auto}
+.input{width:100%;padding:12px;border:1px solid #ccc;border-radius:10px;margin-top:6px}
+.filebox{border:2px dashed #aaa;border-radius:12px;padding:16px;text-align:center;background:#FFFEF5;margin-top:8px}
+.doc-view{position:fixed;inset:0;background:rgba(0,0,0,0.7);display:none;z-index:200;align-items:center;justify-content:center;padding:20px}
+.doc-view.show{display:flex}
+.doc-paper{background:#fff;width:100%;max-width:800px;border-radius:16px;overflow:hidden;max-height:90vh;overflow:auto}
+.doc-header{background:#0A1931;color:#fff;padding:12px 20px;display:flex;justify-content:space-between}
+</style>
+</head>
+<body>
+<script>
+const PROVINCIAS = {"Bengo": ["Dande", "Ambriz", "Bula Atumba", "Dembos", "Nambuangongo", "Pango Aluquém"], "Benguela": ["Benguela", "Baía Farta", "Balombo", "Bocoio", "Caimbambo", "Catumbela", "Chongorói", "Cubal", "Ganda", "Lobito"], "Bié": ["Cuito", "Andulo", "Camacupa", "Catabola", "Chinguar", "Chitembo", "Cuemba", "Cunhinga", "Nharea"], "Cabinda": ["Cabinda", "Belize", "Buco-Zau", "Cacongo"], "Cuando": ["Mavinga", "Cuito Cuanavale", "Dirico", "Luengue", "Mucusso", "Rivungo"], "Cuanza Norte": ["Cazengo", "Ambaca", "Banga", "Bolongongo", "Cambambe", "Golungo Alto", "Gonguembo", "Lucala", "Quiculungo", "Samba Caju"], "Cuanza Sul": ["Sumbe", "Amboim", "Cassongue", "Cela", "Conda", "Ebo", "Libolo", "Mussende", "Porto Amboim", "Quibala", "Quilenda", "Seles"], "Cubango": ["Menongue", "Calai", "Cuangar", "Dirico", "Mavinga", "Nancova", "Rivungo"], "Cunene": ["Ondjiva", "Cahama", "Cuanhama", "Curoca", "Cuvelai", "Namacunde", "Ombadja"], "Huambo": ["Huambo", "Bailundo", "Caála", "Cachiungo", "Chicala-Choloanga", "Chinjenje", "Ecunha", "Londuimbali", "Longonjo", "Mungo", "Ucuma"], "Huíla": ["Lubango", "Caconda", "Cacula", "Caluquembe", "Chiange", "Chibia", "Chicomba", "Chipindo", "Cuvango", "Humpata", "Jamba", "Matala", "Quilengues", "Quipungo"], "Icolo e Bengo": ["Catete", "Bom Jesus", "Cabiri", "Caculo Cahango", "Calumbo", "Caxicane", "Quibala Norte", "Sequele", "Zango"], "Luanda": ["Ingombota", "Belas", "Cacuaco", "Cazenga", "Kilamba Kiaxi", "Luanda", "Maianga", "Mussulo", "Rangel", "Samba", "Sambizanga", "Talatona", "Viana"], "Lunda Norte": ["Dundo", "Cambulo", "Capenda-Camulemba", "Caungula", "Chitato", "Cuango", "Cuilo", "Lubalo", "Lucapa", "Xá-Muteba"], "Lunda Sul": ["Saurimo", "Cacolo", "Dala", "Muconda"], "Malanje": ["Malanje", "Cacuso", "Calandula", "Cambundi-Catembo", "Cangandala", "Caombo", "Cuaba Nzoji", "Cunda-Dia-Baze", "Luquembo", "Marimba", "Massango", "Mucari", "Quela", "Quirima"], "Moxico": ["Luena", "Alto Zambeze", "Bundas", "Camanongue", "Léua", "Luchazes", "Luau"], "Moxico Leste": ["Cazombo", "Cameia", "Luacano", "Luchazes Leste", "Nana Candundo"], "Namibe": ["Moçâmedes", "Bibala", "Camucuio", "Tômbua", "Virei"], "Uíge": ["Uíge", "Alto Cauale", "Ambuila", "Bembe", "Buengas", "Bungo", "Damba", "Macocola", "Milunga", "Mucaba", "Negage", "Puri", "Quimbele", "Quitexe", "Sanza Pombo", "Songo"], "Zaire": ["Mbanza Kongo", "Cuimba", "Nóqui", "Nzeto", "Soyo", "Tomboco"]};
+const LISTA = ["Bengo", "Benguela", "Bié", "Cabinda", "Cuando", "Cuanza Norte", "Cuanza Sul", "Cubango", "Cunene", "Huambo", "Huíla", "Icolo e Bengo", "Luanda", "Lunda Norte", "Lunda Sul", "Malanje", "Moxico", "Moxico Leste", "Namibe", "Uíge", "Zaire"];
+</script>
+
+<div class="header-top"><span>REPÚBLICA DE ANGOLA • INAAREES • PORTAL OFICIAL • MESCTI • GOVERNO DE ANGOLA</span><span>938 510 719 • Kilamba, Belas, Luanda • inaarees.gov.ao@gmail.com</span></div>
+
+<div class="header-main">
+<div class="header-inner">
+<div class="logo" onclick="showPage('inicio')"><div class="logo-icon">INAA<br>REES</div><div><div style="font-weight:900">INAAREES</div><div style="font-size:9px;opacity:0.6">PORTAL OFICIAL</div></div></div>
+<div class="nav">
+<button onclick="showPage('inicio')" data-p="inicio" class="nav-btn active">Início</button>
+<button onclick="showPage('sobre')" data-p="sobre" class="nav-btn">Sobre</button>
+<button onclick="showPage('servicos')" data-p="servicos" class="nav-btn">Serviços</button>
+<button onclick="showPage('taxas')" data-p="taxas" class="nav-btn">Taxas</button>
+<button onclick="showPage('legislacao')" data-p="legislacao" class="nav-btn">Legislação</button>
+<button onclick="showPage('auditoria')" data-p="auditoria" class="nav-btn">Auditoria</button>
+<button onclick="showPage('comunicacao')" data-p="comunicacao" class="nav-btn">Imprensa</button>
+<button onclick="showPage('solicitar')" data-p="solicitar" class="nav-btn solicitar">Solicitar Homologação</button>
+<button onclick="showPage('perfil')" data-p="perfil" class="nav-btn">Meu Perfil</button>
+</div>
+<div style="display:flex;gap:8px">
+<button onclick="openM('criar')" class="btn btn-border">Criar conta</button>
+<button onclick="openM('entrar')" class="btn btn-dark">Entrar →</button>
+</div>
+</div>
+</div>
+
+<div class="progress-bar">
+<div class="progress-inner">
+<div><span id="pageLabel" style="background:#0A1931;color:#fff;padding:4px 10px;border-radius:12px;font-size:11px;font-weight:700">Início</span> <span style="font-size:11px;opacity:0.6;margin-left:8px">Portal Oficial • 21 Províncias • Lei 14/24 • Recibo e Declaração Oficial</span></div>
+<div style="display:flex;gap:8px;align-items:center"><div style="width:100px;height:6px;background:#ddd;border-radius:10px"><div id="gProg" style="height:100%;background:#0A1931;width:10%;border-radius:10px"></div></div><span id="gText" style="font-size:11px;font-weight:700">10%</span></div>
+</div>
+</div>
+
+<main class="page-wrap">
+
+<div id="page-inicio" class="page active">
+<h1 style="font-size:38px;line-height:0.9;font-weight:900">Homologação oficial Ensino Médio <span style="color:#CE1126">10º á 13º</span> e Superior 1º á 5º ano</h1>
+<p style="margin-top:12px;font-size:14px;opacity:0.7;max-width:650px">Portal oficial do Governo de Angola. Emissão de Recibo Institucional Oficial INAAREES-INST, Recibo Oficial INAAREES-HOM e Declaração Oficial INAAREES-DEC com selo da República de Angola e assinatura do Director Geral do INAAREES.</p>
+<div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap">
+<button onclick="showPage('solicitar')" class="btn btn-red" style="padding:14px 28px">Solicitar Homologação →</button>
+<button onclick="showPage('sobre')" class="btn btn-border" style="padding:14px 28px">Sobre o INAAREES</button>
+<button onclick="openM('recuperar')" class="btn btn-yellow">Recuperar Conta</button>
+</div>
+<div style="margin-top:30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+<div class="card"><div style="font-weight:900;font-size:20px">21</div><div style="font-size:10px;opacity:0.6">PROVÍNCIAS LEI 14/24</div><div style="font-size:11px;margin-top:6px">Bengo, Benguela, Bié, Cabinda, Cuando, Cuanza Norte, Cuanza Sul, Cubango, Cunene, Huambo, Huíla, Icolo e Bengo, Luanda, Lunda Norte, Lunda Sul, Malanje, Moxico, Moxico Leste, Namibe, Uíge, Zaire</div></div>
+<div class="card"><div style="font-weight:900;font-size:20px">10º-13º</div><div style="font-size:10px;opacity:0.6">ENSINO MÉDIO</div><div style="font-size:11px;margin-top:6px">10ª, 11ª, 12ª, 13ª Classe - Geral e Técnico-Profissional - Válido para emprego e concursos</div><button onclick="showPage('servicos')" class="btn btn-dark" style="margin-top:10px">Ver serviços →</button></div>
+<div class="card"><div style="font-weight:900;font-size:20px">1º-5º Ano</div><div style="font-size:10px;opacity:0.6">ENSINO SUPERIOR</div><div style="font-size:11px;margin-top:6px">1º ao 5º Ano - Licenciatura - Análise pedagógica com selo branco</div><button onclick="showPage('servicos')" class="btn btn-red" style="margin-top:10px">Ver serviços →</button></div>
+<div class="card" style="background:#0A1931;color:#fff"><div style="font-weight:900;font-size:16px">Meu Perfil • Painel Oficial</div><div style="font-size:11px;opacity:0.7;margin-top:6px">Recibo Institucional Oficial INAAREES-INST, Recibo Oficial INAAREES-HOM, Declaração Oficial INAAREES-DEC, Recuperar Conta, Terminar Sessão</div><button onclick="showPage('perfil')" class="btn" style="margin-top:12px;background:#fff;color:#000">Aceder ao painel →</button></div>
+</div>
+</div>
+
+<div id="page-sobre" class="page">
+<h2 style="font-size:28px;font-weight:900">Sobre o INAAREES</h2>
+<div style="margin-top:8px;display:flex;gap:8px;align-items:center"><span style="background:#0A1931;color:#fff;padding:4px 10px;border-radius:12px;font-size:11px">PÁGINA 2 / 8 • 25%</span><div style="flex:1;max-width:300px;height:6px;background:#ddd;border-radius:10px"><div style="height:100%;background:#0A1931;width:25%"></div></div></div>
+<div style="margin-top:20px;display:grid;grid-template-columns:1.3fr 0.7fr;gap:16px">
+<div class="card">
+<h3 style="font-weight:900">Instituto Nacional de Avaliação, Acreditação e Reconhecimento de Estudos</h3>
+<p style="font-size:13px;opacity:0.8;margin-top:10px;line-height:1.6">O INAAREES é o organismo do Ministério do Ensino Superior, Ciência, Tecnologia e Inovação (MESCTI) da República de Angola, responsável pela homologação, reconhecimento e equivalência de estudos do Ensino Médio e Superior, conferindo validade nacional.</p>
+<p style="font-size:13px;opacity:0.8;margin-top:10px"><b>Sede Oficial:</b> Condomínio Jardim do Kilamba, Município de Belas, Província de Luanda, Angola.<br><b>Tel/WhatsApp:</b> 938 510 719<br><b>Email:</b> inaarees.gov.ao@gmail.com</p>
+<div style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<div style="border:1px solid #ddd;border-radius:10px;padding:12px;background:#F8FAFB"><div style="font-weight:700;font-size:12px">Missão</div><div style="font-size:11px;opacity:0.6;margin-top:4px">Garantir rigor, transparência e validade nacional com selo oficial da República.</div></div>
+<div style="border:1px solid #ddd;border-radius:10px;padding:12px;background:#F8FAFB"><div style="font-weight:700;font-size:12px">Documentos Oficiais</div><div style="font-size:11px;opacity:0.6;margin-top:4px">INAAREES-INST (institucional), INAAREES-HOM (recibo aluno), INAAREES-DEC (declaração oficial)</div></div>
+</div>
+</div>
+<div class="card" style="background:#0A1931;color:#fff">
+<div style="font-weight:800">21 Províncias - Lei 14/24 - Municípios Sincronizados</div>
+<div style="font-size:11px;opacity:0.7;margin-top:10px;line-height:1.6">Cada província tem municípios oficiais que aparecem automaticamente ao selecionar província no cadastro institucional e na solicitação de homologação. Ex: Luanda → Belas, Cacuaco, Cazenga, Kilamba Kiaxi, Viana, Talatona, etc. Icolo e Bengo → Catete, Bom Jesus, Zango. Moxico Leste → Cazombo, Cameia. Cubango → Menongue, Calai.</div>
+<div style="margin-top:16px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:10px;padding:12px;font-size:11px"><b>Contactos:</b><br>Kilamba, Belas, Luanda<br>938 510 719<br>inaarees.gov.ao@gmail.com</div>
+</div>
+</div>
+<div style="margin-top:20px;display:flex;justify-content:space-between"><button onclick="showPage('inicio')" class="btn btn-border">← Início</button><button onclick="showPage('servicos')" class="btn btn-dark">Serviços →</button></div>
+</div>
+
+<div id="page-servicos" class="page">
+<h2 style="font-size:28px;font-weight:900">Serviços Oficiais</h2>
+<div style="margin-top:8px;display:flex;gap:8px;align-items:center"><span style="background:#0A1931;color:#fff;padding:4px 10px;border-radius:12px;font-size:11px">PÁGINA 3 / 8 • 37%</span><div style="flex:1;max-width:300px;height:6px;background:#ddd;border-radius:10px"><div style="height:100%;background:#0A1931;width:37%"></div></div></div>
+<div style="margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+<div class="card" style="border:2px solid #0A1931"><div style="width:48px;height:48px;background:#0A1931;color:#fff;display:flex;align-items:center;justify-content:center;border-radius:10px;font-weight:900">10-13</div><div style="margin-top:12px;font-weight:900;font-size:16px">Ensino Médio • 10ª, 11ª, 12ª e 13ª Classe</div><p style="font-size:12px;opacity:0.6;margin-top:8px">Reconhecimento oficial do II Ciclo do Ensino Secundário Geral e Técnico-Profissional. Válido para emprego, concursos públicos, inscrição em universidades e continuidade de estudos.</p><div style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap"><span style="border:1px solid #ddd;padding:4px 8px;border-radius:12px;font-size:10px">10ª Classe</span><span style="border:1px solid #ddd;padding:4px 8px;border-radius:12px;font-size:10px">11ª Classe</span><span style="border:1px solid #ddd;padding:4px 8px;border-radius:12px;font-size:10px">12ª Classe</span><span style="border:1px solid #ddd;padding:4px 8px;border-radius:12px;font-size:10px">13ª Classe</span></div><button onclick="showPage('solicitar')" class="btn btn-dark" style="margin-top:16px;width:100%">Solicitar Homologação Médio →</button></div>
+<div class="card" style="border:2px solid #CE1126;background:#FFF9F9"><div style="width:48px;height:48px;background:#CE1126;color:#fff;display:flex;align-items:center;justify-content:center;border-radius:10px;font-weight:900">1-5</div><div style="margin-top:12px;font-weight:900;font-size:16px">Ensino Superior • 1º ao 5º Ano</div><p style="font-size:12px;opacity:0.6;margin-top:8px">Validação de frequência, conclusão e graus de Licenciatura (4 a 5 anos). Inclui análise pedagógica, verificação documental, selo branco da República e assinatura do Director Geral do INAAREES.</p><div style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap"><span style="border:1px solid #ddd;background:#fff;padding:4px 8px;border-radius:12px;font-size:10px">1º Ano</span><span style="border:1px solid #ddd;background:#fff;padding:4px 8px;border-radius:12px;font-size:10px">2º Ano</span><span style="border:1px solid #ddd;background:#fff;padding:4px 8px;border-radius:12px;font-size:10px">3º Ano</span><span style="border:1px solid #ddd;background:#fff;padding:4px 8px;border-radius:12px;font-size:10px">4º Ano</span><span style="border:1px solid #ddd;background:#fff;padding:4px 8px;border-radius:12px;font-size:10px">5º Ano</span></div><button onclick="showPage('solicitar')" class="btn btn-red" style="margin-top:16px;width:100%">Solicitar Homologação Superior →</button></div>
+</div>
+<div style="margin-top:20px;display:flex;justify-content:space-between"><button onclick="showPage('sobre')" class="btn btn-border">← Sobre</button><button onclick="showPage('taxas')" class="btn btn-dark">Taxas Oficiais →</button></div>
+</div>
+
+<div id="page-taxas" class="page">
+<h2 style="font-size:28px;font-weight:900">Tabela Oficial de Emolumentos</h2>
+<div style="margin-top:8px;display:flex;gap:8px;align-items:center"><span style="background:#0A7A2A;color:#fff;padding:4px 10px;border-radius:12px;font-size:11px">PÁGINA 4 / 8 • INSCRIÇÃO INSTITUCIONAL GRATUITA • 50%</span><div style="flex:1;max-width:300px;height:6px;background:#ddd;border-radius:10px"><div style="height:100%;background:#0A7A2A;width:50%"></div></div></div>
+<div style="margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+<div class="card" style="padding:0;overflow:hidden"><div style="background:#0A1931;color:#fff;padding:12px 20px;font-weight:800;display:flex;justify-content:space-between"><span>Ensino Médio • 10º ao 13º</span><span style="font-size:10px;background:rgba(255,255,255,0.2);padding:2px 8px;border-radius:10px">Portaria 15/22</span></div><table style="width:100%;font-size:13px;border-collapse:collapse"><tr style="background:#f1f1f1;font-size:11px"><th style="text-align:left;padding:10px 20px">Regime</th><th>Prazo</th><th style="text-align:right;padding-right:20px">Taxa</th></tr><tr style="border-top:1px solid #eee"><td style="padding:10px 20px;font-weight:700">Normal</td><td style="text-align:center">15 dias úteis</td><td style="text-align:right;padding-right:20px;font-weight:900">2.500 Kz</td></tr><tr style="border-top:1px solid #eee"><td style="padding:10px 20px;font-weight:700">Urgente</td><td style="text-align:center">7 dias</td><td style="text-align:right;padding-right:20px;font-weight:900">5.000 Kz</td></tr><tr style="border-top:1px solid #eee;background:#FFF8D6"><td style="padding:10px 20px;font-weight:700">Personalizado ⚡</td><td style="text-align:center">24 horas</td><td style="text-align:right;padding-right:20px;font-weight:900">7.500 Kz</td></tr><tr style="border-top:1px solid #eee;background:#FFF8D6"><td style="padding:10px 20px;font-weight:700">Executivo ⚡</td><td style="text-align:center">2 horas</td><td style="text-align:right;padding-right:20px;font-weight:900">10.000 Kz</td></tr></table><div style="padding:10px 20px;background:#F8FAFB;border-top:1px solid #eee;font-size:11px">Recibo INAAREES-HOM + Declaração INAAREES-DEC após comprovativo Entidade 11247 Ref 104797774</div></div>
+<div class="card" style="padding:0;overflow:hidden;border:2px solid #CE1126"><div style="background:#CE1126;color:#fff;padding:12px 20px;font-weight:800;display:flex;justify-content:space-between"><span>Ensino Superior • 1º ao 5º Ano</span><span style="font-size:10px;background:rgba(0,0,0,0.2);padding:2px 8px;border-radius:10px">DP 193/18</span></div><table style="width:100%;font-size:13px;border-collapse:collapse"><tr style="background:#f1f1f1;font-size:11px"><th style="text-align:left;padding:10px 20px">Regime</th><th>Prazo</th><th style="text-align:right;padding-right:20px">Taxa</th></tr><tr style="border-top:1px solid #eee"><td style="padding:10px 20px;font-weight:700">Normal</td><td style="text-align:center">15 dias</td><td style="text-align:right;padding-right:20px;font-weight:900">5.000 Kz</td></tr><tr style="border-top:1px solid #eee"><td style="padding:10px 20px;font-weight:700">Urgente</td><td style="text-align:center">7 dias</td><td style="text-align:right;padding-right:20px;font-weight:900">10.000 Kz</td></tr><tr style="border-top:1px solid #eee;background:#FFE5E5"><td style="padding:10px 20px;font-weight:700">Personalizado ⚡</td><td style="text-align:center">24 horas</td><td style="text-align:right;padding-right:20px;font-weight:900">15.000 Kz</td></tr><tr style="border-top:1px solid #eee;background:#FFE5E5"><td style="padding:10px 20px;font-weight:700">Executivo ⚡</td><td style="text-align:center">2 horas</td><td style="text-align:right;padding-right:20px;font-weight:900">20.000 Kz</td></tr></table><div style="padding:10px 20px;background:#FFF5F5;border-top:1px solid #eee;font-size:11px">Com análise pedagógica, selo branco, assinatura Director Geral e QR Code</div></div>
+</div>
+<div style="margin-top:12px;background:#fff;border:1px solid #ddd;border-radius:12px;padding:12px;font-size:11px">💳 <b>Pagamento Oficial:</b> Entidade 11247 Referência 104797774. Após comprovativo no Meu Perfil, liberação automática de <b>Recibo Institucional Oficial INAAREES-INST, Recibo Oficial INAAREES-HOM e Declaração Oficial INAAREES-DEC</b> com selo da República.</div>
+<div style="margin-top:20px;display:flex;justify-content:space-between"><button onclick="showPage('servicos')" class="btn btn-border">← Serviços</button><button onclick="showPage('legislacao')" class="btn btn-dark">Legislação →</button></div>
+</div>
+
+<div id="page-legislacao" class="page">
+<h2 style="font-size:28px;font-weight:900">Legislação Aplicável</h2>
+<div style="margin-top:8px;display:flex;gap:8px;align-items:center"><span style="background:#0A1931;color:#fff;padding:4px 10px;border-radius:12px;font-size:11px">PÁGINA 5 / 8 • 62%</span><div style="flex:1;max-width:300px;height:6px;background:#ddd;border-radius:10px"><div style="height:100%;background:#0A1931;width:62%"></div></div></div>
+<div style="margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<div class="card"><div style="font-size:10px;background:#0A1931;color:#fff;display:inline-block;padding:2px 8px;border-radius:10px">Lei 17/16</div><div style="margin-top:8px;font-weight:800">Lei de Bases do Sistema de Educação e Ensino</div><div style="font-size:11px;opacity:0.6;margin-top:6px">Base jurídica para avaliação, acreditação e reconhecimento de estudos.</div></div>
+<div class="card"><div style="font-size:10px;background:#0A1931;color:#fff;display:inline-block;padding:2px 8px;border-radius:10px">DP 193/18</div><div style="margin-top:8px;font-weight:800">Regime Jurídico de Homologação e Equivalência</div><div style="font-size:11px;opacity:0.6;margin-top:6px">Procedimentos de validação documental, análise pedagógica e emissão de declaração oficial.</div></div>
+<div class="card" style="background:#FFF9F9;border-color:#CE1126"><div style="font-size:10px;background:#CE1126;color:#fff;display:inline-block;padding:2px 8px;border-radius:10px">Lei 14/24</div><div style="margin-top:8px;font-weight:800">Divisão Político-Administrativa - 21 Províncias</div><div style="font-size:11px;opacity:0.6;margin-top:6px">Oficializa 21 províncias: cria Icolo e Bengo, Moxico Leste e Cubango.</div></div>
+<div class="card"><div style="font-size:10px;background:#0A1931;color:#fff;display:inline-block;padding:2px 8px;border-radius:10px">Portaria 15/22</div><div style="margin-top:8px;font-weight:800">Tabela de Emolumentos e Regimes</div><div style="font-size:11px;opacity:0.6;margin-top:6px">Define taxas oficiais Normal, Urgente, Personalizado, Executivo.</div></div>
+</div>
+<div style="margin-top:20px;display:flex;justify-content:space-between"><button onclick="showPage('taxas')" class="btn btn-border">← Taxas</button><button onclick="showPage('auditoria')" class="btn btn-dark">Auditoria →</button></div>
+</div>
+
+<div id="page-auditoria" class="page">
+<h2 style="font-size:28px;font-weight:900">Auditoria e Validação Pública</h2>
+<div style="margin-top:8px;display:flex;gap:8px;align-items:center"><span style="background:#0A1931;color:#fff;padding:4px 10px;border-radius:12px;font-size:11px">PÁGINA 6 / 8 • 75%</span><div style="flex:1;max-width:300px;height:6px;background:#ddd;border-radius:10px"><div style="height:100%;background:#0A1931;width:75%"></div></div></div>
+<div style="margin-top:20px;display:grid;grid-template-columns:1.2fr 0.8fr;gap:16px">
+<div class="card">
+<div style="font-weight:800">Verificar autenticidade de documentos oficiais</div>
+<p style="font-size:11px;opacity:0.6;margin-top:6px">INAAREES-INST, INAAREES-HOM, INAAREES-DEC</p>
+<div style="margin-top:16px;display:flex;gap:8px"><input id="busca" placeholder="Ex: INAAREES-HOM-2026-0842" style="flex:1;padding:12px;border:1px solid #ccc;border-radius:20px"><button onclick="verificar()" class="btn btn-yellow">Verificar</button></div>
+<div id="resBusca" style="margin-top:16px"></div>
+<div style="margin-top:20px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;text-align:center">
+<div style="background:#F8FAFB;border:1px solid #ddd;border-radius:12px;padding:12px"><div id="cInst" style="font-weight:900;font-size:18px">0</div><div style="font-size:9px;opacity:0.6">INSTITUIÇÕES</div></div>
+<div style="background:#F8FAFB;border:1px solid #ddd;border-radius:12px;padding:12px"><div id="cPend" style="font-weight:900;font-size:18px">0</div><div style="font-size:9px;opacity:0.6">PENDENTES</div></div>
+<div style="background:#F8FAFB;border:1px solid #ddd;border-radius:12px;padding:12px"><div id="cHom" style="font-weight:900;font-size:18px">0</div><div style="font-size:9px;opacity:0.6">HOMOLOGADOS</div></div>
+</div>
+</div>
+<div class="card" style="background:#0A1931;color:#fff">
+<div style="font-weight:800">Elementos de Segurança</div>
+<div style="margin-top:12px;font-size:12px;opacity:0.9;line-height:1.6">
+<div style="margin-top:10px">🔒 <b>Recibo Institucional INAAREES-INST</b><br><span style="font-size:11px;opacity:0.7">Emitido após registo gratuito com NIF, Alvará e BI responsável.</span></div>
+<div style="margin-top:12px">🧾 <b>Recibo Homologação INAAREES-HOM</b><br><span style="font-size:11px;opacity:0.7">Recibo aluno com taxa, regime, Entidade 11247 Ref 104797774, QR Code.</span></div>
+<div style="margin-top:12px">🏛️ <b>Declaração Oficial INAAREES-DEC</b><br><span style="font-size:11px;opacity:0.7">Selo branco República, logotipo República Angola, assinatura Director Geral INAAREES.</span></div>
+</div>
+</div>
+</div>
+<div style="margin-top:20px;display:flex;justify-content:space-between"><button onclick="showPage('legislacao')" class="btn btn-border">← Legislação</button><button onclick="showPage('comunicacao')" class="btn btn-dark">Imprensa →</button></div>
+</div>
+
+<div id="page-comunicacao" class="page">
+<h2 style="font-size:28px;font-weight:900">Imprensa e Comunicação</h2>
+<div style="margin-top:8px;display:flex;gap:8px;align-items:center"><span style="background:#0A1931;color:#fff;padding:4px 10px;border-radius:12px;font-size:11px">PÁGINA 7 / 8 • 87%</span><div style="flex:1;max-width:300px;height:6px;background:#ddd;border-radius:10px"><div style="height:100%;background:#0A1931;width:87%"></div></div></div>
+<div style="margin-top:20px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+<div class="card"><div style="font-size:10px;opacity:0.6">10 Abr 2026 • INAAREES</div><div style="margin-top:8px;font-weight:800;font-size:13px">Portal oficial com atendimento nas 21 províncias e emissão em 2 horas</div><p style="font-size:11px;opacity:0.6;margin-top:8px">Novo portal oficial permite registo gratuito e emissão prioritária em 2 horas úteis no regime Executivo. Sede: Kilamba, Belas, Luanda.</p></div>
+<div class="card"><div style="font-size:10px;opacity:0.6">02 Abr 2026 • Taxas</div><div style="margin-top:8px;font-weight:800;font-size:13px">Taxas oficiais mantidas conforme Portaria 15/22</div><p style="font-size:11px;opacity:0.6;margin-top:8px">Ensino Médio desde 2.500 Kz e Superior desde 5.000 Kz. Inscrição institucional gratuita.</p></div>
+<div class="card"><div style="font-size:10px;opacity:0.6">15 Mar 2026 • Segurança</div><div style="margin-top:8px;font-weight:800;font-size:13px">Validação QR Code obrigatória em todos documentos</div><p style="font-size:11px;opacity:0.6;margin-top:8px">Todos recibos e declarações com selo da República, QR Code, logotipo República Angola e marca d'água INAAREES para auditoria pública.</p></div>
+</div>
+<div style="margin-top:20px;display:flex;justify-content:space-between"><button onclick="showPage('auditoria')" class="btn btn-border">← Auditoria</button><button onclick="showPage('solicitar')" class="btn btn-red">Solicitar Homologação →</button></div>
+</div>
+
+<div id="page-solicitar" class="page">
+<div style="max-width:900px;margin:0 auto">
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+<div><h2 style="font-size:26px;font-weight:900">Solicitar Homologação Oficial</h2><p style="font-size:11px;opacity:0.6">Processo em 4 etapas com barra de progresso • Anexos obrigatórios</p></div>
+<span id="etapaLabel" style="background:#0A1931;color:#fff;padding:6px 12px;border-radius:12px;font-size:11px;font-weight:700">ETAPA 1 / 4 • Dados Pessoais</span>
+</div>
+<div class="steps-bar">
+<div class="active" id="g1"><div class="num" id="b1">1</div><div><div style="font-size:11px;font-weight:700">Dados Pessoais</div><div style="font-size:9px;opacity:0.6">BI, Foto meio corpo</div><div style="height:4px;background:#ddd;border-radius:10px;margin-top:4px"><div id="p1" style="height:100%;background:#0A1931;width:100%;border-radius:10px"></div></div></div></div>
+<div id="g2"><div class="num" id="b2">2</div><div><div style="font-size:11px;font-weight:700">Dados Académicos</div><div style="font-size:9px;opacity:0.6">Certificado, Declaração</div><div style="height:4px;background:#ddd;border-radius:10px;margin-top:4px"><div id="p2" style="height:100%;background:#0A1931;width:0%;border-radius:10px"></div></div></div></div>
+<div id="g3"><div class="num" id="b3">3</div><div><div style="font-size:11px;font-weight:700">Regime & Taxa</div><div style="font-size:9px;opacity:0.6">Entidade 11247</div><div style="height:4px;background:#ddd;border-radius:10px;margin-top:4px"><div id="p3" style="height:100%;background:#0A1931;width:0%;border-radius:10px"></div></div></div></div>
+<div id="g4"><div class="num" id="b4">4</div><div><div style="font-size:11px;font-weight:700">Revisão</div><div style="font-size:9px;opacity:0.6">Submeter</div><div style="height:4px;background:#ddd;border-radius:10px;margin-top:4px"><div id="p4" style="height:100%;background:#0A1931;width:0%;border-radius:10px"></div></div></div></div>
+</div>
+<div class="card" style="min-height:480px">
+<div id="step-1" class="step active">
+<h3 style="font-weight:800">Etapa 1: Dados Pessoais e Académicos Iniciais</h3>
+<p style="font-size:11px;opacity:0.6">Informações conforme Bilhete de Identidade + foto meio corpo tipo passe</p>
+<div style="margin-top:16px;display:grid;grid-template-columns:1fr 200px;gap:16px">
+<div style="display:grid;gap:10px">
+<input id="a_nome" placeholder="Nome completo do aluno / estudante *" class="input">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><input id="a_bi" placeholder="Nº BI *" class="input"><input id="a_nasc" placeholder="Data nascimento DD/MM/AAAA *" class="input"></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><select id="a_genero" class="input"><option>Masculino</option><option>Feminino</option></select><input id="a_tel" placeholder="Telefone / WhatsApp *" class="input"></div>
+<input id="a_email" placeholder="Email (opcional)" class="input">
+<input id="a_mat" placeholder="Nº Matrícula *" class="input">
+</div>
+<div class="filebox">
+<div style="font-size:11px;font-weight:700">Foto meio corpo *</div>
+<div style="font-size:10px;opacity:0.6">JPG/PNG, fundo branco</div>
+<div style="width:80px;height:100px;background:#ddd;margin:12px auto;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:24px">🧑‍🎓</div>
+<input id="a_foto" type="file" accept="image/*" style="width:100%;font-size:11px">
+<div style="font-size:9px;opacity:0.5;margin-top:6px">Obrigatório para declaração oficial</div>
+</div>
+</div>
+<div style="margin-top:20px;display:flex;justify-content:space-between"><button onclick="showPage('comunicacao')" class="btn btn-border">← Imprensa</button><button onclick="nextStep(2)" class="btn btn-dark">Avançar → Dados Académicos</button></div>
+</div>
+<div id="step-2" class="step">
+<h3 style="font-weight:800">Etapa 2: Dados Académicos e Anexos Oficiais</h3>
+<p style="font-size:11px;opacity:0.6">Curso, classe, escola + anexar BI, declaração, certificado</p>
+<div style="margin-top:16px;display:grid;gap:12px">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><select id="a_nivel" class="input" style="font-weight:700" onchange="upClasse()"><option value="Médio">Ensino Médio</option><option value="Superior">Ensino Superior</option></select><select id="a_classe" class="input" style="font-weight:700"></select></div>
+<input id="a_curso" placeholder="Curso * ex: Ciências Físicas e Biológicas / Direito" class="input">
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px"><input id="a_ano" placeholder="Ano Lectivo ex: 2023/2024 *" class="input"><input id="a_media" placeholder="Média final * ex: 14" class="input"><input id="a_escola" placeholder="Escola / Universidade origem *" class="input"></div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:8px">
+<div class="filebox"><div style="font-size:11px;font-weight:700">📄 BI frente e verso *</div><div style="font-size:10px;opacity:0.6">PDF/JPG/PNG</div><input id="a_bi_file" type="file" accept=".pdf,.jpg,.png" style="width:100%;font-size:11px;margin-top:8px"></div>
+<div class="filebox"><div style="font-size:11px;font-weight:700">📜 Declaração / Certificado *</div><div style="font-size:10px;opacity:0.6">Declaração escolar</div><input id="a_decl_file" type="file" accept=".pdf,.jpg,.png" style="width:100%;font-size:11px;margin-top:8px"></div>
+<div class="filebox"><div style="font-size:11px;font-weight:700">🎓 Histórico / Certificado *</div><div style="font-size:10px;opacity:0.6">Habilitações</div><input id="a_cert_file" type="file" accept=".pdf,.jpg,.png" style="width:100%;font-size:11px;margin-top:8px"></div>
+</div>
+</div>
+<div style="margin-top:20px;display:flex;justify-content:space-between"><button onclick="nextStep(1)" class="btn btn-border">← Voltar</button><button onclick="nextStep(3)" class="btn btn-dark">Avançar → Regime e Taxa</button></div>
+</div>
+<div id="step-3" class="step">
+<h3 style="font-weight:800">Etapa 3: Regime, Taxa Oficial e Pagamento</h3>
+<p style="font-size:11px;opacity:0.6">Portaria 15/22 • Entidade 11247 Ref 104797774</p>
+<div style="margin-top:16px;display:grid;grid-template-columns:1.2fr 0.8fr;gap:16px">
+<div style="display:grid;gap:12px">
+<select id="a_regime" class="input" style="font-weight:700" onchange="upTaxa()"><option>Normal - 15 dias úteis</option><option>Urgente - 7 dias úteis</option><option>Personalizado - 24 horas</option><option>Executivo - 2 horas úteis</option></select>
+<div style="background:#F8FAFB;border:1px solid #ddd;border-radius:12px;padding:12px;font-size:11px;line-height:1.6"><div style="font-weight:700">O que inclui:</div><div style="margin-top:6px">• <b>Normal:</b> 15 dias úteis - Recibo INAAREES-HOM + Declaração INAAREES-DEC</div><div>• <b>Urgente:</b> 7 dias úteis com prioridade</div><div>• <b>Personalizado:</b> 24 horas - prioritário</div><div>• <b>Executivo:</b> 2 horas úteis - máxima prioridade com QR Code imediato</div></div>
+</div>
+<div style="background:#0A1931;color:#fff;border-radius:16px;padding:16px"><div style="font-size:10px;opacity:0.7;font-weight:700">PAGAMENTO OFICIAL</div><div style="margin-top:10px;font-size:13px">Entidade: <b style="color:#FFC72C">11247</b><br>Referência: <b style="color:#FFC72C">104797774</b><div style="margin-top:12px">Valor:</div><div id="taxaPrev" style="font-size:28px;font-weight:900;color:#FFC72C">2.500 Kz</div><div id="taxaDetalhe" style="font-size:11px;opacity:0.7">Normal • 15 dias • Médio</div></div><div style="margin-top:16px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:10px;padding:10px;font-size:10px">Após submeter: Meu Perfil → Anexar comprovativo para liberar Recibo Oficial + Declaração Oficial com selo República, QR Code e assinatura Director Geral.</div></div>
+</div>
+<div style="margin-top:20px;display:flex;justify-content:space-between"><button onclick="nextStep(2)" class="btn btn-border">← Voltar</button><button onclick="nextStep(4)" class="btn btn-dark">Avançar → Revisão Final</button></div>
+</div>
+<div id="step-4" class="step">
+<h3 style="font-weight:800">Etapa 4: Revisão Final e Submissão Oficial</h3>
+<p style="font-size:11px;opacity:0.6">Confirme todos os dados antes de submeter</p>
+<div id="resumo" style="margin-top:16px;background:#F8FAFB;border:2px solid #ddd;border-radius:12px;padding:16px;font-size:12px;line-height:1.6"></div>
+<div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<div style="background:#FFF8D6;border:1px solid #FFD700;border-radius:10px;padding:12px;font-size:11px"><b>⚠️ Importante:</b> Anexe foto meio corpo, BI frente e verso, declaração, certificado. Documentos ilegíveis implicam indeferimento.</div>
+<div style="background:#D6FFE5;border:1px solid #00AA44;border-radius:10px;padding:12px;font-size:11px"><b>✅ Após submissão:</b> Painel → Anexar comprovativo Entidade 11247 Ref 104797774 → Liberação automática Recibo Oficial + Declaração Oficial com selo República, QR Code, marca d'água, assinatura Director Geral.</div>
+</div>
+<div style="margin-top:20px;display:flex;justify-content:space-between"><button onclick="nextStep(3)" class="btn btn-border">← Voltar</button><button onclick="salvar()" class="btn btn-red" style="padding:12px 28px">✓ Submeter Pedido Oficial →</button></div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="page-perfil" class="page">
+<div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;align-items:center">
+<div><h2 style="font-size:26px;font-weight:900">Meu Perfil • Painel Institucional Oficial</h2><p style="font-size:11px;opacity:0.6">Recibo Institucional Oficial INAAREES-INST • Recibo Oficial INAAREES-HOM • Declaração Oficial INAAREES-DEC • Recuperar Conta • Terminar Sessão</p></div>
+<div id="areaBotoes"><span id="msgSemLogin" style="background:#fff;border:1px solid #ddd;padding:8px 16px;border-radius:20px;font-size:12px;font-weight:700">Faça login para aceder</span></div>
+</div>
+<div id="semLogin" style="margin-top:24px;background:#fff;border:1px solid #ddd;border-radius:20px;padding:40px;text-align:center">
+<div style="width:60px;height:60px;background:#0A1931;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;font-weight:900;font-size:20px">IN</div>
+<div style="margin-top:16px;font-weight:800;font-size:18px">Bem-vindo ao Painel Oficial INAAREES</div>
+<div style="font-size:13px;opacity:0.6;margin-top:8px;max-width:650px;margin-left:auto;margin-right:auto;line-height:1.6">Portal oficial do Governo de Angola para homologação de estudos do Ensino Médio (10ª a 13ª classe) e Superior (1º ao 5º ano). Crie conta gratuita da sua instituição com dados pessoais do responsável, BI, alvará e NIF para submeter pedidos em qualquer uma das 21 províncias com municípios sincronizados. Documentos oficiais: <b>Recibo Institucional Oficial INAAREES-INST, Recibo Oficial INAAREES-HOM e Declaração Oficial INAAREES-DEC</b> com selo da República, QR Code e assinatura do Director Geral do INAAREES.</div>
+<div style="margin-top:20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><button onclick="openM('criar')" class="btn btn-dark" style="padding:12px 24px">Criar conta institucional gratuita</button><button onclick="openM('entrar')" class="btn btn-border" style="padding:12px 24px">Entrar no painel</button><button onclick="openM('recuperar')" class="btn btn-yellow">Recuperar Conta</button></div>
+</div>
+<div id="comLogin" style="display:none">
+<div style="margin-top:20px;background:#fff;border:1px solid #ddd;border-radius:16px;padding:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center">
+<div style="display:flex;gap:12px;align-items:center"><div style="width:44px;height:44px;background:#CE1126;border:2px solid #FFC72C;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:8px">INAA<br>REES</div><div><div id="instNome" style="font-weight:800;font-size:14px"></div><div id="instInfo" style="font-size:11px;opacity:0.6"></div></div></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button onclick="showPage('solicitar')" class="btn btn-dark" style="font-size:11px">+ Solicitar Homologação</button><button onclick="reciboInstAtual()" class="btn btn-border" style="font-size:11px">📄 Recibo Institucional Oficial</button><button onclick="openM('recuperar')" class="btn btn-yellow" style="font-size:11px">Recuperar Conta</button><button onclick="logout()" class="btn" style="background:#CE1126;color:#fff;font-size:11px">Terminar Sessão / Sair</button></div>
+</div>
+<div style="margin-top:16px;background:#fff;border:1px solid #ddd;border-radius:20px;overflow:hidden">
+<div style="padding:12px 20px;background:#F8FAFB;border-bottom:1px solid #ddd;display:flex;justify-content:space-between"><div style="font-weight:700">Processos de Homologação • Recibos e Declarações Oficiais</div><div style="font-size:10px;opacity:0.6">Entidade 11247 Ref 104797774 • QR Code • Selo República</div></div>
+<table style="width:100%;font-size:12px;border-collapse:collapse" id="tab"><thead style="background:#F8FAFB;font-size:10px;opacity:0.6"><tr><th style="text-align:left;padding:12px 20px">Aluno / Estudante • Classe / Foto</th><th style="text-align:left;padding:12px">Curso • Escola • Anexos</th><th style="text-align:left;padding:12px">Taxa • Regime • Província</th><th style="text-align:left;padding:12px">Processo • Status</th><th style="text-align:right;padding:12px 20px">Ações • Recibo + Declaração Oficial</th></tr></thead><tbody></tbody></table>
+<div id="vazio" style="padding:40px;text-align:center"><div style="font-weight:700;opacity:0.6">Nenhum pedido de homologação ainda</div><div style="font-size:12px;opacity:0.4;margin-top:6px">Clique em + Solicitar Homologação e siga as 4 etapas: Dados Pessoais → Dados Académicos com anexos (BI, declaração, certificado, foto) → Regime e Taxa → Revisão</div><button onclick="showPage('solicitar')" class="btn btn-dark" style="margin-top:12px">+ Solicitar Homologação Oficial →</button></div>
+</div>
+</div>
+</div>
+
+</main>
+
+<footer style="background:#0A1931;color:#fff;padding:30px 20px;margin-top:40px">
+<div style="max-width:1300px;margin:0 auto"><div style="font-weight:800">INAAREES • Instituto Nacional de Avaliação, Acreditação e Reconhecimento de Estudos</div><div style="font-size:11px;opacity:0.6;margin-top:8px;line-height:1.6;max-width:900px">República de Angola • Governo de Angola • MESCTI • Sede: Condomínio Jardim do Kilamba, Município de Belas, Província de Luanda • Tel/WhatsApp: 938 510 719 • Email: inaarees.gov.ao@gmail.com • Atendimento nas 21 províncias conforme Lei 14/24 • Documentos oficiais: Recibo Institucional Oficial INAAREES-INST (inscrição gratuita), Recibo Oficial de Homologação INAAREES-HOM (aluno/estudante) e Declaração Oficial INAAREES-DEC com selo branco da República, logotipo República de Angola, assinatura do Director Geral do INAAREES</div><div style="margin-top:16px;font-size:10px;opacity:0.4">© 2026 INAAREES • Portal Oficial • Todos os direitos reservados • Domínio oficial: https://inaarees-gov-ao.github.io/angola/</div></div>
+</footer>
+
+<div id="bg" class="modal-bg">
+<div id="criar" class="modal-box" style="display:none;max-width:720px">
+<div style="display:flex;justify-content:space-between"><div><h3 style="font-weight:900;font-size:20px">Criar Conta Institucional Oficial</h3><p style="font-size:11px;opacity:0.6">Registo gratuito • Dados pessoais responsável • Anexos obrigatórios • Recibo Institucional Oficial INAAREES-INST</p></div><button onclick="closeM()" style="border:0;background:#f1f1f1;width:32px;height:32px;border-radius:50%;cursor:pointer">✕</button></div>
+<div style="margin-top:8px;background:#0A1931;color:#fff;border-radius:20px;padding:6px;display:flex;gap:4px;font-size:10px;font-weight:700"><div style="flex:1;background:#fff;color:#000;border-radius:12px;padding:6px;text-align:center">1. Dados Instituição</div><div style="flex:1;opacity:0.6;padding:6px;text-align:center">2. Documentos • BI, Alvará, NIF</div><div style="flex:1;opacity:0.6;padding:6px;text-align:center">3. Acesso</div></div>
+<div style="margin-top:16px;display:grid;gap:12px">
+<div style="font-size:11px;font-weight:700;opacity:0.6;text-transform:uppercase">Dados da Instituição</div>
+<input id="c_nome" placeholder="Nome completo da Instituição * ex: Colégio Bueia & Filhos Lda" class="input">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><input id="c_nif" placeholder="NIF da Instituição * ex: 5417123453" class="input"><select id="c_tipo" class="input"><option>Privada</option><option>Pública</option><option>Público-Privada</option></select></div>
+<input id="c_alvara" placeholder="Nº Alvará / Decreto de Criação * ex: 123/2023" class="input">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><select id="c_prov" class="input" style="font-weight:700" onchange="atualizaM('c_prov','c_mun')"><option value="">Selecione Província * - 21 províncias Lei 14/24</option></select><select id="c_mun" class="input"><option value="">Selecione Município * - sincronizado automático</option></select></div>
+<div style="font-size:11px;font-weight:700;opacity:0.6;text-transform:uppercase;margin-top:8px">Dados Pessoais do Responsável / Director Geral</div>
+<input id="c_dir" placeholder="Nome completo do Director Geral / Responsável *" class="input">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><input id="c_dir_bi" placeholder="Nº BI do Responsável *" class="input"><input id="c_dir_tel" placeholder="Telefone do Responsável *" class="input"></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><input id="c_email" placeholder="Email institucional oficial *" class="input"><input id="c_tel" placeholder="Telefone institucional / WhatsApp *" class="input"></div>
+<div style="font-size:11px;font-weight:700;opacity:0.6;text-transform:uppercase;margin-top:8px">Anexos Obrigatórios • Documentos Oficiais</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
+<div class="filebox"><div style="font-size:11px;font-weight:700">📄 BI do Responsável *</div><div style="font-size:10px;opacity:0.6">Frente e verso • PDF/JPG/PNG</div><input id="c_file_bi_resp" type="file" accept=".pdf,.jpg,.png" style="width:100%;font-size:11px;margin-top:8px"></div>
+<div class="filebox"><div style="font-size:11px;font-weight:700">📜 Alvará / Decreto *</div><div style="font-size:10px;opacity:0.6">Alvará funcionamento</div><input id="c_file_alvara" type="file" accept=".pdf,.jpg,.png" style="width:100%;font-size:11px;margin-top:8px"></div>
+<div class="filebox"><div style="font-size:11px;font-weight:700">🧾 NIF / Documento NIF *</div><div style="font-size:10px;opacity:0.6">Comprovativo NIF</div><input id="c_file_nif" type="file" accept=".pdf,.jpg,.png" style="width:100%;font-size:11px;margin-top:8px"></div>
+</div>
+<div style="font-size:11px;font-weight:700;opacity:0.6;text-transform:uppercase;margin-top:8px">Acesso ao Painel</div>
+<input id="c_pass" type="password" placeholder="Criar Password de acesso * mínimo 6 caracteres" class="input">
+<div style="background:#D6FFE5;border:1px solid #00AA44;border-radius:10px;padding:10px;font-size:11px"><b>✅ Inscrição 100% gratuita</b> para instituições públicas e privadas. Após registo será gerado automaticamente o <b>Recibo Institucional Oficial INAAREES-INST</b> com selo da República, QR Code, logotipo República de Angola e assinatura do Director Geral. Taxa gratuita conforme Portaria 15/22.</div>
+</div>
+<button onclick="criarConta()" class="btn btn-red" style="margin-top:16px;width:100%;padding:14px">✓ Criar conta gratuita e gerar Recibo Institucional Oficial INAAREES-INST →</button>
+<button onclick="closeM()" class="btn btn-border" style="margin-top:8px;width:100%">Cancelar</button>
+</div>
+
+<div id="entrar" class="modal-box" style="display:none;max-width:440px">
+<div style="display:flex;justify-content:space-between"><div><h3 style="font-weight:900;font-size:22px">Entrar no Painel Oficial</h3><p style="font-size:11px;opacity:0.6">Acesso institucional • Recibos e declarações oficiais</p></div><button onclick="closeM()" style="border:0;background:#f1f1f1;width:32px;height:32px;border-radius:50%;cursor:pointer">✕</button></div>
+<div style="margin-top:20px;display:grid;gap:10px"><input id="e_nif" placeholder="NIF da Instituição" class="input"><input id="e_email" placeholder="Email institucional oficial" class="input"><input id="e_pass" type="password" placeholder="Password" class="input">
+<button onclick="login()" class="btn btn-dark" style="padding:14px">Entrar no painel oficial →</button>
+<div style="display:flex;justify-content:space-between;font-size:11px"><button onclick="openM('recuperar')" style="text-decoration:underline;font-weight:700;background:none;border:0;cursor:pointer">Recuperar Conta</button><button onclick="openM('criar')" style="text-decoration:underline;background:none;border:0;cursor:pointer">Criar conta gratuita</button></div>
+<div style="margin-top:12px;background:#F5F3EB;border:1px solid #ddd;border-radius:10px;padding:10px;font-size:10px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:700">Segurança:</span><button onclick="logout()" style="background:#CE1126;color:#fff;border:0;padding:6px 12px;border-radius:12px;font-size:10px;font-weight:700;cursor:pointer">Terminar Sessão / Sair da Conta</button></div><div style="opacity:0.6;margin-top:4px">Terminar sessão limpa dados e volta ao início.</div></div>
+</div>
+</div>
+
+<div id="recuperar" class="modal-box" style="display:none;max-width:440px">
+<div style="display:flex;justify-content:space-between"><div><h3 style="font-weight:900;font-size:18px">Recuperar Conta Institucional</h3><p style="font-size:11px;opacity:0.6">Envio de link para email oficial</p></div><button onclick="closeM()" style="border:0;background:#f1f1f1;width:32px;height:32px;border-radius:50%;cursor:pointer">✕</button></div>
+<div style="margin-top:20px;display:grid;gap:10px"><input id="r_email" placeholder="Email institucional oficial ou NIF *" class="input">
+<button onclick="recuperar()" class="btn btn-yellow" style="padding:14px">Enviar link de recuperação →</button>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><button onclick="openM('entrar')" class="btn btn-border" style="font-size:12px">← Voltar ao login</button><button onclick="logout()" class="btn" style="background:#CE1126;color:#fff;font-size:12px">Terminar Sessão / Sair</button></div>
+<div style="margin-top:8px;font-size:10px;opacity:0.6;text-align:center">Suporte oficial: 938 510 719 • inaarees.gov.ao@gmail.com</div>
+</div>
+</div>
+
+<div id="comp" class="modal-box" style="display:none;max-width:520px">
+<div style="display:flex;justify-content:space-between"><div><h3 style="font-weight:800">Anexar Comprovativo Bancário Oficial</h3><p style="font-size:11px;opacity:0.6">Liberação automática Recibo Oficial INAAREES-HOM + Declaração Oficial INAAREES-DEC</p></div><button onclick="closeM()" style="border:0;background:#f1f1f1;width:32px;height:32px;border-radius:50%;cursor:pointer">✕</button></div>
+<div style="margin-top:12px;background:#F8FAFB;border:1px solid #ddd;border-radius:10px;padding:12px;font-size:12px"><div>Aluno: <b id="compNome"></b></div><div>Taxa: <b id="compTaxa"></b> • Entidade 11247 Ref 104797774</div><div>Província: <b id="compProv"></b></div></div>
+<div class="filebox" style="margin-top:12px;padding:24px"><div style="font-size:14px;font-weight:700">📎 Upload do comprovativo bancário</div><div style="font-size:11px;opacity:0.6;margin-top:4px">Transferência / Depósito - Entidade 11247 Ref 104797774</div><div style="font-size:10px;opacity:0.5;margin-top:2px">Formatos: PDF, JPG, PNG • Legível</div><input id="compFile" type="file" accept=".pdf,.jpg,.png" style="width:100%;margin-top:12px;font-size:12px"></div>
+<button onclick="confirmar()" class="btn btn-dark" style="margin-top:16px;width:100%;padding:14px">✓ Confirmar pagamento e liberar Recibo Oficial + Declaração Oficial →</button>
+<button onclick="closeM()" class="btn btn-border" style="margin-top:8px;width:100%">Cancelar</button>
+</div>
+</div>
+
+<div id="docView" class="doc-view">
+<div class="doc-paper">
+<div class="doc-header"><div><div style="font-weight:800;font-size:11px">REPÚBLICA DE ANGOLA • INAAREES • DOCUMENTO OFICIAL</div><div style="font-size:9px;opacity:0.7">Selo República • QR Code • Assinatura Director Geral</div></div><button onclick="document.getElementById('docView').classList.remove('show')" style="background:rgba(255,255,255,0.1);border:0;color:#fff;padding:6px 12px;border-radius:12px;font-size:11px;cursor:pointer">Fechar ✕</button></div>
+<div id="docHtml" style="padding:30px;background:#fff;min-height:500px;font-size:12px;line-height:26px"></div>
+<div style="padding:16px;display:flex;gap:8px;justify-content:center;background:#F5F3EB;border-top:1px solid #ddd;flex-wrap:wrap">
+<button onclick="window.print()" class="btn btn-dark" style="font-size:12px">📥 Baixar / Imprimir PDF Oficial • Recibo / Declaração com Selo República</button>
+<button onclick="document.getElementById('docView').classList.remove('show')" class="btn btn-border" style="font-size:12px">Fechar visualização</button>
+<button onclick="logout()" class="btn" style="background:#CE1126;color:#fff;font-size:12px">Terminar Sessão / Sair da Conta</button>
+</div>
+</div>
+</div>
+
+<script>
+let db=JSON.parse(localStorage.getItem('inaarees_final_FUNCIONA_v20')||'{"insts":[],"alunos":[]}');
+let curInst=JSON.parse(localStorage.getItem('inaarees_cur_FUNCIONA_v20')||'null');
+let selAluno=null; let currentDoc=null; let etapaAtual=1;
+function save(){localStorage.setItem('inaarees_final_FUNCIONA_v20',JSON.stringify(db));}
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  let el=document.getElementById('page-'+id);
+  if(el) el.classList.add('active');
+  document.querySelectorAll('.nav-btn').forEach(b=>{b.classList.remove('active'); if(b.dataset.p===id) b.classList.add('active');});
+  document.getElementById('pageLabel').innerText=id.charAt(0).toUpperCase()+id.slice(1);
+  let pct={inicio:10,sobre:25,servicos:37,taxas:50,legislacao:62,auditoria:75,comunicacao:87,solicitar:95,perfil:100}[id]||10;
+  document.getElementById('gProg').style.width=pct+'%';
+  document.getElementById('gText').innerText=pct+'%';
+  if(id==='solicitar'){etapaAtual=1; showStep(1);}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function showStep(n){
+  etapaAtual=n;
+  document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));
+  document.getElementById('step-'+n).classList.add('active');
+  document.getElementById('etapaLabel').innerText='ETAPA '+n+' / 4 • '+['Dados Pessoais do Aluno','Dados Académicos e Anexos','Regime e Taxa Oficial','Revisão Final'][n-1];
+  for(let i=1;i<=4;i++){
+    let g=document.getElementById('g'+i); if(g) g.classList.toggle('active', i<=n);
+    let p=document.getElementById('p'+i); if(p) p.style.width = i<n ? '100%' : i===n ? '60%' : '0%';
+    let b=document.getElementById('b'+i); if(b) b.style.background = i<=n ? '#0A1931' : '#ddd'; if(b) b.style.color = i<=n ? '#fff' : '#000';
+  }
+  if(n===4){
+    let nome=document.getElementById('a_nome').value; let bi=document.getElementById('a_bi').value; let curso=document.getElementById('a_curso').value; let classe=document.getElementById('a_classe').value; let regime=document.getElementById('a_regime').value; let taxa=document.getElementById('taxaPrev').innerText; let escola=document.getElementById('a_escola').value; let media=document.getElementById('a_media').value;
+    document.getElementById('resumo').innerHTML='<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div><b>Aluno/Estudante:</b> '+nome+'<br><b>BI:</b> '+bi+'<br><b>Matrícula:</b> '+(document.getElementById('a_mat').value||'—')+'<br><b>Telefone:</b> '+(document.getElementById('a_tel').value||'—')+'</div><div><b>Classe/Ano:</b> '+classe+'<br><b>Curso:</b> '+curso+'<br><b>Escola/Universidade:</b> '+escola+'<br><b>Média:</b> '+media+'</div></div><div style="margin-top:12px;padding:12px;background:#fff;border:1px solid #ddd;border-radius:10px"><b>Regime:</b> '+regime+'<br><b>Taxa Oficial:</b> '+taxa+'<br><b>Pagamento:</b> Entidade 11247 Ref 104797774<br><b>Instituição:</b> '+(curInst?curInst.nome+' • '+curInst.prov+'/'+curInst.mun:'—')+'</div><div style="margin-top:8px;font-size:11px;opacity:0.6">Anexos: Foto meio corpo, BI frente e verso, Declaração, Certificado / Histórico. Após submissão, anexar comprovativo bancário para liberação de Recibo Oficial INAAREES-HOM + Declaração Oficial INAAREES-DEC com selo da República, QR Code e assinatura Director Geral.</div>';
+  }
+}
+function nextStep(n){
+  if(n===2 && (!document.getElementById('a_nome').value||!document.getElementById('a_bi').value)){alert('Preencha na Etapa 1: Nome completo e Nº BI são obrigatórios, incluindo foto meio corpo.');return;}
+  if(n===3 && (!document.getElementById('a_curso').value||!document.getElementById('a_escola').value)){alert('Preencha na Etapa 2: Curso, Ano, Média, Escola origem e anexos (BI, declaração, certificado) são obrigatórios.');return;}
+  showStep(n);
+}
+function openM(id){document.getElementById('bg').classList.add('show');document.querySelectorAll('.modal-box').forEach(m=>m.style.display='none');document.getElementById(id).style.display='block'; if(id==='criar') carregaP('c_prov');}
+function openModal(id){openM(id);} function closeM(){document.getElementById('bg').classList.remove('show');}
+function carregaP(id){let s=document.getElementById(id);s.innerHTML='<option value="">Selecione Província * - 21 províncias Lei 14/24</option>';LISTA.forEach(p=>{let o=document.createElement('option');o.value=p;o.textContent=p;s.appendChild(o);});}
+function atualizaM(pId,mId){let p=document.getElementById(pId).value;let m=document.getElementById(mId);m.innerHTML='<option value="">Selecione Município * - sincronizado automático</option>';if(PROVINCIAS[p]) PROVINCIAS[p].forEach(x=>{let o=document.createElement('option');o.value=x;o.textContent=x;m.appendChild(o);});}
+function upClasse(){let niv=document.getElementById('a_nivel').value;let sel=document.getElementById('a_classe');sel.innerHTML='';let ops=niv==='Médio'?['10ª Classe','11ª Classe','12ª Classe','13ª Classe']:['1º Ano','2º Ano','3º Ano','4º Ano','5º Ano'];ops.forEach(o=>{let op=document.createElement('option');op.value=o;op.textContent=o;sel.appendChild(op);});upTaxa();}
+function upTaxa(){let niv=document.getElementById('a_nivel')?.value||'Médio';let reg=document.getElementById('a_regime')?.value||'Normal - 15 dias úteis';let base=reg.split(' - ')[0];let t={Normal:2500,Urgente:5000,Personalizado:7500,Executivo:10000};let ts={Normal:5000,Urgente:10000,Personalizado:15000,Executivo:20000};let v=niv==='Médio'?t[base]:ts[base];document.getElementById('taxaPrev').innerText=v.toLocaleString()+' Kz';document.getElementById('taxaDetalhe').innerText=niv+' • '+reg+' • Entidade 11247 Ref 104797774';}
+function criarConta(){
+  let prov=document.getElementById('c_prov').value;let mun=document.getElementById('c_mun').value;
+  if(!prov||!mun){alert('Selecione Província e Município - 21 províncias Lei 14/24');return;}
+  let inst={
+    id:Date.now(),
+    nome:document.getElementById('c_nome').value,
+    nif:document.getElementById('c_nif').value,
+    tipo:document.getElementById('c_tipo').value,
+    alvara:document.getElementById('c_alvara').value,
+    prov,mun,
+    dir:document.getElementById('c_dir').value,
+    dir_bi:document.getElementById('c_dir_bi').value,
+    dir_tel:document.getElementById('c_dir_tel').value,
+    email:document.getElementById('c_email').value,
+    tel:document.getElementById('c_tel').value,
+    pass:document.getElementById('c_pass').value,
+    proc:'INAAREES-INST-2026-'+Math.floor(1000+Math.random()*9000),
+    data:new Date().toLocaleString('pt-AO'),
+    docs:{bi_resp:document.getElementById('c_file_bi_resp').files[0]?.name||'—', alvara:document.getElementById('c_file_alvara').files[0]?.name||'—', nif:document.getElementById('c_file_nif').files[0]?.name||'—'}
+  };
+  if(!inst.nome||!inst.nif||!inst.email||!inst.pass||!inst.dir||!inst.dir_bi){alert('Preencha todos campos obrigatórios * incluindo dados pessoais do responsável (Director Geral) e anexos: BI do responsável, Alvará e NIF');return;}
+  db.insts.push(inst);save();curInst=inst;localStorage.setItem('inaarees_cur_FUNCIONA_v20',JSON.stringify(inst));closeM();showPage('perfil');mostrarPainel();reciboInst(inst);
+}
+function login(){let nif=document.getElementById('e_nif').value.trim();let email=document.getElementById('e_email').value.trim();let pass=document.getElementById('e_pass').value;let inst=db.insts.find(i=> ((nif&&i.nif===nif)||(email&&i.email===email)) && i.pass===pass);if(!inst){alert('Credenciais inválidas. Utilize Recuperar Conta.');return;}curInst=inst;localStorage.setItem('inaarees_cur_FUNCIONA_v20',JSON.stringify(inst));closeM();showPage('perfil');mostrarPainel();}
+function recuperar(){let v=document.getElementById('r_email').value.trim();let inst=db.insts.find(i=>i.email===v||i.nif===v);if(!inst){alert('Instituição não encontrada. Contacte suporte oficial: 938 510 719 • inaarees.gov.ao@gmail.com');return;}alert('Link de recuperação enviado para: '+inst.email+' • Instituição: '+inst.nome+' • '+inst.prov+'/'+inst.mun);closeM();openM('entrar');}
+function logout(){localStorage.removeItem('inaarees_cur_FUNCIONA_v20');curInst=null;location.reload();}
+function mostrarPainel(){if(!curInst) return;document.getElementById('semLogin').style.display='none';document.getElementById('comLogin').style.display='block';document.getElementById('msgSemLogin').innerHTML='<span style="background:#D6FFE5;border:1px solid #00AA44;padding:6px 12px;border-radius:12px;font-size:11px;font-weight:700">'+curInst.nome.slice(0,24)+' • '+curInst.prov+'/'+curInst.mun+'</span> <button onclick="logout()" style="margin-left:8px;background:#CE1126;color:#fff;border:0;padding:6px 12px;border-radius:12px;font-size:11px;font-weight:700;cursor:pointer">Terminar Sessão / Sair</button>';document.getElementById('instNome').innerText=curInst.nome+' • '+curInst.proc+' • '+curInst.prov+'/'+curInst.mun+' • Director: '+curInst.dir;document.getElementById('instInfo').innerText=curInst.prov+'/'+curInst.mun+' (21 províncias sincronizadas) • '+curInst.email+' • Tel: '+curInst.tel+' • NIF: '+curInst.nif+' • Alvará: '+curInst.alvara+' • BI Responsável: '+curInst.dir_bi;render();}
+function salvar(){
+  let nivel=document.getElementById('a_nivel').value;let classe=document.getElementById('a_classe').value;let regimeFull=document.getElementById('a_regime').value;let base=regimeFull.split(' - ')[0];
+  let t={Normal:2500,Urgente:5000,Personalizado:7500,Executivo:10000};let ts={Normal:5000,Urgente:10000,Personalizado:15000,Executivo:20000};let valor=nivel==='Médio'?t[base]:ts[base];
+  let aluno={
+    id:Date.now(),instId:curInst.id,
+    nome:document.getElementById('a_nome').value,
+    bi:document.getElementById('a_bi').value,
+    nasc:document.getElementById('a_nasc').value,
+    genero:document.getElementById('a_genero').value,
+    tel:document.getElementById('a_tel').value,
+    email:document.getElementById('a_email').value,
+    mat:document.getElementById('a_mat').value,
+    nivel,classe,
+    curso:document.getElementById('a_curso').value,
+    ano:document.getElementById('a_ano').value,
+    media:document.getElementById('a_media').value,
+    escola:document.getElementById('a_escola').value,
+    regime:base,regimeFull,valor,
+    status:'Aguarda Comprovativo',
+    proc:'INAAREES-HOM-2026-'+Math.floor(10000+Math.random()*90000),
+    dec:'INAAREES-DEC-2026-'+Math.floor(10000+Math.random()*90000),
+    ref:'928410538222 / '+new Date().getFullYear()+' / INAAREES',
+    data:new Date().toLocaleString('pt-AO'),
+    prov:curInst.prov,mun:curInst.mun,
+    anexos:{
+      foto:document.getElementById('a_foto').files[0]?.name||'—',
+      bi:document.getElementById('a_bi_file').files[0]?.name||'—',
+      declaracao:document.getElementById('a_decl_file').files[0]?.name||'—',
+      certificado:document.getElementById('a_cert_file').files[0]?.name||'—'
+    }
+  };
+  if(!aluno.nome||!aluno.bi||!aluno.curso){alert('Preencha dados obrigatórios: nome, BI, curso, escola, média e anexos (foto meio corpo, BI, declaração, certificado)');return;}
+  db.alunos.push(aluno);save();showPage('perfil');mostrarPainel();
+}
+function render(){
+  if(!curInst) return;
+  let lista=db.alunos.filter(a=>a.instId===curInst.id);
+  document.getElementById('cInst').innerText=db.insts.length;
+  document.getElementById('cPend').innerText=db.alunos.filter(a=>a.status==='Aguarda Comprovativo').length;
+  document.getElementById('cHom').innerText=db.alunos.filter(a=>a.status==='Homologado').length;
+  let tbody=document.querySelector('#tab tbody');tbody.innerHTML='';
+  document.getElementById('vazio').style.display=lista.length?'none':'block';
+  lista.forEach(a=>{
+    let tr=document.createElement('tr');tr.style.borderTop='1px solid #eee';
+    tr.innerHTML='<td style="padding:12px 20px"><div style="display:flex;gap:10px;align-items:center"><div style="width:40px;height:48px;background:#ddd;border-radius:8px;display:flex;align-items:center;justify-content:center">🧑‍🎓</div><div><div style="font-weight:700">'+a.nome+'</div><div style="font-size:10px;opacity:0.6">'+a.prov+'/'+a.mun+' • BI '+a.bi+' • '+a.classe+' • '+a.genero+'</div><div style="font-size:9px;opacity:0.5">Foto: '+a.anexos.foto+'</div></div></div></td><td style="padding:12px"><div style="font-weight:700;font-size:12px">'+a.curso+'</div><div style="font-size:10px;opacity:0.6">'+a.ano+' • Média '+a.media+' • '+a.escola+'</div><div style="font-size:9px;opacity:0.5;margin-top:4px">Anexos: BI '+a.anexos.bi+' • Decl '+a.anexos.declaracao+' • Cert '+a.anexos.certificado+'</div></td><td style="padding:12px"><div style="font-weight:900">'+a.valor.toLocaleString()+' Kz</div><div style="font-size:10px;opacity:0.6">'+a.regime+' • '+a.regimeFull.split(' - ')[1]+'</div><div style="font-size:9px;opacity:0.5">'+a.prov+'/'+a.mun+'</div></td><td style="padding:12px"><div style="font-family:monospace;font-size:10px;font-weight:700">'+a.proc+'</div><div style="font-family:monospace;font-size:9px;opacity:0.6">'+a.dec+'</div><span style="margin-top:4px;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;'+(a.status==='Homologado'?'background:#D6FFE5;color:#0A7A2A':'background:#FFF8D6;color:#8A6A00')+'">'+a.status+'</span></td><td style="padding:12px 20px;text-align:right">'+(a.status==='Aguarda Comprovativo'?'<button onclick="abrirComp('+a.id+')" style="background:#CE1126;color:#fff;border:0;padding:6px 12px;border-radius:12px;font-size:11px;font-weight:700;cursor:pointer">📎 Anexar Comprovativo</button>':'<div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end"><button onclick="reciboAluno('+a.id+')" style="background:#0A1931;color:#fff;border:0;padding:6px 12px;border-radius:12px;font-size:11px;font-weight:700;cursor:pointer">📄 Recibo Oficial INAAREES-HOM</button><button onclick="declaracao('+a.id+')" style="background:#fff;border:2px solid #0A1931;padding:6px 12px;border-radius:12px;font-size:11px;font-weight:700;cursor:pointer">🏛️ Declaração Oficial INAAREES-DEC</button></div>')+'</td>';
+    tbody.appendChild(tr);
+  });
+}
+function abrirComp(id){selAluno=db.alunos.find(a=>a.id===id);document.getElementById('compNome').innerText=selAluno.nome;document.getElementById('compTaxa').innerText=selAluno.valor.toLocaleString()+' Kz • '+selAluno.regime;document.getElementById('compProv').innerText=selAluno.prov+'/'+selAluno.mun+' • '+selAluno.curso;openM('comp');}
+function confirmar(){if(!document.getElementById('compFile').files.length){alert('Anexe comprovativo bancário oficial - Entidade 11247 Referência 104797774 - PDF, JPG ou PNG legível');return;}selAluno.status='Homologado';save();closeM();render();reciboAluno(selAluno.id);}
+function reciboInst(inst){
+  currentDoc={type:'inst',data:inst};
+  let html=`
+  <div style="border-bottom:6px double black;padding-bottom:16px">
+    <div style="display:flex;justify-content:space-between">
+      <div style="display:flex;gap:12px;align-items:center">
+        <div style="width:64px;height:64px;background:#CE1126;border:2px solid #FFC72C;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:10px;text-align:center">INAA<br>REES</div>
+        <div><div style="font-weight:900">REPÚBLICA DE ANGOLA</div><div style="font-weight:700;font-size:12px">INAAREES - INSTITUTO NACIONAL DE AVALIAÇÃO, ACREDITAÇÃO E RECONHECIMENTO DE ESTUDOS</div><div style="font-size:9px;opacity:0.6">MESCTI • Governo de Angola</div></div>
+      </div>
+      <div style="width:84px;height:84px;border:2px dashed #0A1931;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;text-align:center">QR CODE<br>${inst.proc.slice(-4)}<br>VALIDAÇÃO<br>OFICIAL</div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:20px">
+    <div style="display:inline-block;background:#0A1931;color:#fff;padding:4px 12px;border-radius:12px;font-size:10px;font-weight:700">RECIBO DE SUBMISSÃO • INSCRIÇÃO INSTITUCIONAL OFICIAL</div>
+    <h2 style="margin-top:10px;font-weight:900;font-size:18px">RECIBO INSTITUCIONAL OFICIAL<br><span style="font-family:monospace;font-size:12px;background:#000;color:#fff;padding:4px 10px;border-radius:12px">${inst.proc}</span></h2>
+  </div>
+  <div style="margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:16px;font-size:12px;line-height:1.6">
+    <div style="border:1px solid #ddd;border-radius:12px;padding:12px;background:#FFFEF5"><div style="font-size:10px;opacity:0.6;font-weight:700">DADOS DA INSTITUIÇÃO</div><div style="margin-top:8px"><b>Nome:</b> ${inst.nome}<br><b>NIF:</b> ${inst.nif}<br><b>Tipo:</b> ${inst.tipo}<br><b>Alvará:</b> ${inst.alvara}<br><b>Província:</b> ${inst.prov}<br><b>Município:</b> ${inst.mun}</div></div>
+    <div style="border:1px solid #ddd;border-radius:12px;padding:12px;background:#F0F9FF"><div style="font-size:10px;opacity:0.6;font-weight:700">RESPONSÁVEL • DIRECTOR GERAL</div><div style="margin-top:8px"><b>Nome:</b> ${inst.dir}<br><b>BI:</b> ${inst.dir_bi}<br><b>Tel:</b> ${inst.dir_tel}<br><b>Email:</b> ${inst.email}<br><b>Tel Inst:</b> ${inst.tel}<br><span style="font-size:10px">• BI Resp: ${inst.docs.bi_resp}<br>• Alvará: ${inst.docs.alvara}<br>• NIF: ${inst.docs.nif}</span></div></div>
+  </div>
+  <div style="margin-top:16px;border:2px solid #00AA44;background:#D6FFE5;border-radius:12px;padding:12px"><div style="display:flex;justify-content:space-between"><span><b>Taxa Inscrição Institucional:</b></span><span style="font-weight:900;font-size:16px;color:#0A7A2A">GRATUITO • 0,00 Kz</span></div><div style="font-size:10px;opacity:0.7;margin-top:4px">Inscrição gratuita para públicas e privadas conforme Portaria 15/22. Recibo oficial com selo da República, QR Code, logotipo República Angola e assinatura Director Geral.</div></div>
+  <div style="margin-top:20px;font-size:11px;opacity:0.6">Luanda, aos ${inst.data}</div>
+  <div style="margin-top:30px;text-align:center"><div style="border-top:2px solid #000;width:240px;margin:0 auto;padding-top:8px"><i style="font-size:11px">O Director Geral do INAAREES</i><br><span style="font-family:cursive;font-size:22px;font-weight:700">Jesus A. Tomé</span><br><span style="font-size:8px;opacity:0.6">Assinatura e selo branco da República</span></div></div>
+  `;
+  mostrarDoc(html);
+}
+function reciboInstAtual(){if(curInst) reciboInst(curInst);}
+function reciboAluno(id){
+  let a=db.alunos.find(x=>x.id===id); currentDoc={type:'recibo',data:a};
+  let html=`
+  <div style="border-bottom:6px double black;padding-bottom:16px;display:flex;justify-content:space-between"><div style="display:flex;gap:10px;align-items:center"><div style="width:56px;height:56px;background:#CE1126;border:2px solid #FFC72C;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:9px">INAA<br>REES</div><div><div style="font-weight:900">REPÚBLICA DE ANGOLA • INAAREES</div><div style="font-size:10px;opacity:0.6">Recibo Oficial de Homologação • 21 Províncias • Lei 14/24</div></div></div><div style="width:84px;height:84px;border:2px dashed #0A1931;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;text-align:center">QR CODE<br>${a.proc.slice(-4)}<br>VALIDAÇÃO</div></div>
+  <div style="text-align:center;margin-top:16px"><div style="display:inline-block;background:#CE1126;color:#fff;padding:4px 12px;border-radius:12px;font-size:10px;font-weight:700">RECIBO OFICIAL • INAAREES-HOM</div><h2 style="margin-top:8px;font-weight:900">RECIBO OFICIAL DE HOMOLOGAÇÃO<br><span style="font-family:monospace;font-size:11px;background:#0A1931;color:#fff;padding:4px 10px;border-radius:12px">${a.proc} • ${a.dec}</span></h2></div>
+  <div style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:11px">
+    <div style="border:1px solid #ddd;border-radius:12px;padding:12px;background:#FFFEF5"><div style="font-size:10px;opacity:0.6;font-weight:700">DADOS PESSOAIS DO ALUNO</div><div style="margin-top:8px;line-height:1.6"><b>Nome:</b> ${a.nome}<br><b>BI:</b> ${a.bi}<br><b>Nasc:</b> ${a.nasc} • <b>Género:</b> ${a.genero}<br><b>Matrícula:</b> ${a.mat}<br><b>Tel:</b> ${a.tel}<br><b>Email:</b> ${a.email||'—'}<br><b>Foto:</b> ${a.anexos.foto}<br><b>Prov/Mun:</b> ${a.prov}/${a.mun}</div></div>
+    <div style="border:1px solid #ddd;border-radius:12px;padding:12px;background:#F0F9FF"><div style="font-size:10px;opacity:0.6;font-weight:700">DADOS ACADÉMICOS</div><div style="margin-top:8px;line-height:1.6"><b>Nível:</b> ${a.nivel}<br><b>Classe/Ano:</b> ${a.classe}<br><b>Curso:</b> ${a.curso}<br><b>Ano Lectivo:</b> ${a.ano}<br><b>Média:</b> ${a.media}<br><b>Escola:</b> ${a.escola}<br><b>Anexos:</b> BI ${a.anexos.bi} • Decl ${a.anexos.declaracao} • Cert ${a.anexos.certificado}</div></div>
+  </div>
+  <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div style="border:2px solid #0A1931;border-radius:12px;padding:12px;background:#F8FAFB"><div style="font-size:10px;font-weight:700">PAGAMENTO OFICIAL</div><div style="margin-top:8px;font-size:12px"><b>Regime:</b> ${a.regime} - ${a.regimeFull}<br><b>Taxa:</b> <span style="font-weight:900;font-size:16px">${a.valor.toLocaleString()} Kz</span><br><b>Entidade:</b> 11247<br><b>Referência:</b> 104797774<br><b>Ref Doc:</b> ${a.ref}<br><b>Instituição:</b> ${curInst.nome}</div></div>
+    <div style="border:1px solid #00AA44;background:#D6FFE5;border-radius:12px;padding:12px"><div style="font-size:10px;font-weight:700;color:#0A7A2A">STATUS E VALIDAÇÃO</div><div style="margin-top:8px;font-size:11px"><span style="background:#0A7A2A;color:#fff;padding:4px 10px;border-radius:10px;font-size:10px;font-weight:700">${a.status}</span><br><br><b>Processo:</b> ${a.proc}<br><b>Declaração:</b> ${a.dec}<br><b>Data:</b> ${a.data}<br><b>Validação QR:</b> Auditoria pública portal oficial</div></div>
+  </div>
+  `;
+  mostrarDoc(html);
+}
+function declaracao(id){
+  let a=db.alunos.find(x=>x.id===id); currentDoc={type:'declaracao',data:a};
+  let html=`
+  <div style="text-align:center"><div style="width:80px;height:80px;margin:0 auto;background:#FFC72C;border:4px solid #0A1931;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:10px">REPÚBLICA<br>ANGOLA</div><div style="margin-top:10px;font-weight:900;font-size:11px;line-height:1.2">REPÚBLICA DE ANGOLA<br>MINISTÉRIO DO ENSINO SUPERIOR, CIÊNCIA, TECNOLOGIA E INOVAÇÃO<br>INAAREES - INSTITUTO NACIONAL DE AVALIAÇÃO, ACREDITAÇÃO E RECONHECIMENTO DE ESTUDOS<br><span style="font-size:9px;opacity:0.6">Lei 17/16 • DP 193/18 • Lei 14/24 - 21 Províncias • Portaria 15/22</span></div></div>
+  <div style="margin-top:20px;display:flex;justify-content:space-between;align-items:center"><div style="width:84px;height:84px;border:2px dashed #0A1931;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;text-align:center">QR CODE<br>VALIDAÇÃO<br>OFICIAL<br>${a.proc.slice(-4)}</div><div style="text-align:center;flex:1;margin:0 20px"><h2 style="font-weight:900;font-size:14px">DECLARAÇÃO OFICIAL DE RECONHECIMENTO DE ESTUDOS<br><span style="font-size:11px">Nº ${a.ref}</span><br><span style="font-family:monospace;font-size:9px;background:#000;color:#fff;padding:4px 8px;border-radius:10px">${a.proc} • ${a.dec} • ${a.prov}/${a.mun}</span></h2></div><div style="width:64px;height:80px;border:1px solid #ddd;border-radius:8px;background:#f1f1f1;display:flex;align-items:center;justify-content:center;font-size:24px">🧑‍🎓</div></div>
+  <div style="margin-top:20px;font-size:12px;line-height:28px;text-align:justify">
+    <p>O Instituto Nacional de Avaliação, Acreditação e Reconhecimento de Estudos do Ensino Médio e Superior - <b>INAAREES</b>, organismo do Ministério do Ensino Superior, Ciência, Tecnologia e Inovação da República de Angola, com sede no Condomínio Jardim do Kilamba, Município de Belas, Província de Luanda, declara para os devidos efeitos legais, académicos e profissionais que <b>${a.nome}</b>, portador(a) do Bilhete de Identidade nº <b>${a.bi}</b>, nascido(a) em <b>${a.nasc}</b>, de género <b>${a.genero}</b>, matriculado(a) sob nº <b>${a.mat}</b>, contacto <b>${a.tel}</b>, frequentou e concluiu com aproveitamento na instituição de ensino <b>${a.escola}</b>, sita em <b>${a.prov}/${a.mun}</b>, o <b>${a.classe}</b> do curso de <b>${a.curso}</b>, no ano lectivo de <b>${a.ano}</b>, com média final de <b>${a.media} valores</b>.</p>
+    <p style="margin-top:12px">O processo de homologação encontra-se devidamente validado e registado neste Instituto sob o processo nº <b>${a.proc}</b> e declaração nº <b>${a.dec}</b>, com referência <b>${a.ref}</b>, de acordo com Lei nº 17/16, DP 193/18 e <b>Lei nº 14/24 - 21 províncias</b>, com província <b>${a.prov}</b> e município <b>${a.mun}</b> sincronizados.</p>
+    <p style="margin-top:12px"><b>Documentos anexados e verificados:</b> BI frente e verso - ${a.anexos.bi}, Declaração - ${a.anexos.declaracao}, Certificado - ${a.anexos.certificado}, Foto meio corpo - ${a.anexos.foto}, Comprovativo Entidade 11247 Ref 104797774 valor ${a.valor.toLocaleString()} Kz regime ${a.regime}.</p>
+    <p style="margin-top:12px">A presente declaração confere ao seu titular os mesmos direitos e efeitos legais dos documentos originais, sendo válida em todo território nacional para emprego, concursos públicos, inscrição em universidades, continuidade de estudos, podendo autenticidade ser verificada via QR Code no portal oficial de auditoria pública do INAAREES.</p>
+    <p style="margin-top:16px;font-weight:700">Por ser verdade e ter sido requerido, mandei passar a presente declaração que vai por mim assinada e autenticada com selo branco da República de Angola.</p>
+    <p style="margin-top:12px"><b>Luanda, aos ${a.data}</b></p>
+  </div>
+  <div style="margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:20px"><div style="text-align:center"><div style="border-top:2px solid #000;width:240px;margin:0 auto;padding-top:8px"><i style="font-size:11px">O Director Geral do INAAREES</i><br><span style="font-family:cursive;font-size:22px;font-weight:700">Jesus A. Tomé</span><br><span style="font-size:8px;opacity:0.6">Assinatura e selo branco da República</span></div></div><div style="font-size:9px;opacity:0.6;line-height:1.5"><b>Elementos de Segurança:</b><br>• Selo branco República Angola<br>• Logotipo oficial República<br>• Assinatura Director Geral<br>• QR Code validação - ${a.proc}<br>• INAAREES<br><br><b>Sede:</b> Kilamba, Belas, Luanda<br><b>Tel:</b> 938 510 719<br><b>Email:</b> inaarees.gov.ao@gmail.com</div></div>
+  `;
+  mostrarDoc(html);
+}
+function mostrarDoc(h){document.getElementById('docHtml').innerHTML=h;document.getElementById('docView').classList.add('show');}
+function verificar(){
+  let v=document.getElementById('busca').value.trim().toUpperCase();
+  let r=document.getElementById('resBusca');
+  if(!v){r.innerHTML='<div style="background:#FFF8D6;border:1px solid #FFD700;padding:12px;border-radius:12px;font-size:12px">Digite número do processo INAAREES-INST, INAAREES-HOM ou INAAREES-DEC</div>';return;}
+  let f=db.alunos.find(a=>a.proc.toUpperCase()===v||a.dec.toUpperCase()===v)||db.insts.find(i=>i.proc.toUpperCase()===v);
+  if(f){r.innerHTML='<div style="background:#D6FFE5;border:2px solid #00AA44;padding:16px;border-radius:12px"><div style="display:flex;gap:12px"><span style="font-size:24px">✅</span><div><div style="font-weight:800;font-size:13px;color:#0A7A2A">Documento Autêntico e Válido • INAAREES</div><div style="font-size:11px;margin-top:6px"><b>Processo:</b> '+f.proc+'<br><b>Província/Município:</b> '+f.prov+'/'+f.mun+'<br><b>Data:</b> '+f.data+'</div></div></div></div>';}else{r.innerHTML='<div style="background:#FFE5E5;border:2px solid #CE1126;padding:16px;border-radius:12px"><div style="display:flex;gap:12px"><span style="font-size:24px">❌</span><div><div style="font-weight:800;font-size:13px;color:#CE1126">Nenhum registo encontrado</div><div style="font-size:11px;opacity:0.7;margin-top:4px">Verifique número. Suporte: 938 510 719 • inaarees.gov.ao@gmail.com</div></div></div></div>';}
+}
+if(curInst){mostrarPainel();}
+carregaP('c_prov'); upClasse();
+</script>
+<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
+</html>
