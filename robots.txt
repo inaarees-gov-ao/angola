@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://inaarees-gov-ao.github.io/angola/sitemap.xml
